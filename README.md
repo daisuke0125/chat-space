@@ -23,28 +23,28 @@ Things you may want to cover:
 
 * ...
 
-##user table
+## user table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|index: true, null: false, unique: true|
 |email|string|null: false, unipue: true|
 
- ###Association
+### Association
 - has_many :groups, through: :group_users
 - has_many :group_users
 - has_many :massages
 
-##group table
+## group table
 |Column|Type|Options|
 |------|----|-------|
 |name|string|index: true, null: false, unique: true|
 
-###Association
+### Association
 - has_many :users, through: :group_users
 - has_many :group_users
 - has_many :massages
 
-##message table
+## message table
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false|
@@ -52,7 +52,7 @@ Things you may want to cover:
 |group|references|foreign_key: true|
 |user|references|foreign_key: true|
 
-###Association
+### Association
 - belongs_to :user
 - belongs_to :group
 
@@ -62,6 +62,6 @@ Things you may want to cover:
 |group|references|index: true, foreign_key: true, null: false|
 |user|references|index: true, foreign_key: true, null: false|
 
-###Association
+### Association
 - belongs_to :user
 - belongs_to :group
