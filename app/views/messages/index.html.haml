@@ -5,41 +5,58 @@
         %p.side-header__box__user-name daisuke
         %ul.side-header__box__menu
           %li.side-header__box__menu__new-group
-            %a{:href => "/groups/new"}
+            %a{href: "/groups/new"}
               %i.fa.fa-edit
           %li.side-header__box__menu__edit-user
-            %a{:href => "/users/:id/edit"}
+            %a{href: "/users/:id/edit"}
               %i.fa.fa-cog
     .groups
-      %a{:href => "/groups/:id/messages"}
+      %a{href: "/groups/:id/messages"}
         .group
           %p.group__group-name test
           %p.group__latest-message こんにちは
-      %a{:href => "/groups/:id/messages"}
+      %a{href: "/groups/:id/messages"}
         .group
           %p.group__group-name test
           %p.group__latest-message さようなら
   .chat-main
     .main-header
       .main-header__left-box
-        %p.main-header__left-box__current-group{"data-group_id" => ""} test
+        %p.main-header__left-box__current-group test
         %ul.main-header__left-box__member-list
           %li.main-header__left-box__member-list__menber Member :
           %li.main-header__left-box__member-list__menber 太郎
           %li.main-header__left-box__member-list__member daisuke
-      %a{:href => "/groups/:id/edit"}
+      %a{href: "/groups/:id/edit"}
         .main-header__edit-btn Edit
     .messages
-      .message{"data-message_id" => ""}
+      .message
         .message__upper-info
           %p.message__upper-info__talker daisuke
           %p.message__upper-info__data 2019/07/17(wed)11:30
         %p.message__text あああ
     .form
-      %form.new_message{:accept-charset => "UTF-8", :action => "/groups/:id/messages", :method => "post"}
+      %form.new_message{accept: { charset: "UTF-8"}, action: "/groups/:id/messages", method: "post"}
         .input-box
-          %input.input-box__text{:name => "message", :placeholder => "type a message", :type => "text"}
-          %label.input-box__image{:for => "message_image"}
+          %input.input-box__text{name: "message", placeholder: "type a message", type: "text"}
+          %label.input-box__image{for: "message_image"}
             %i.fa.fa-image
-            %input#message_image.input-box__image__file{:name => "message", :type => "file"}
-        %input.submit-btn{:data-disable-with => "Send", :name => "commit", :type => "submit", :value => "Send"}
+            %input#message_image.input-box__image__file{name: "message", type: "file"}
+        %input.submit-btn{name: "commit", type: "submit", value: "Send"}
+
+
+
+
+-#  javascript_include_tag 'application', 'data-turbolinks-track' => true
+-#  ↓
+-#  javascript_include_tag 'application', data: { turbolinks: { track: true }}
+
+
+-# 'class' => hoge
+-# ↓
+-# class: hoge
+
+
+-# user = { :first_name => "Yusuke", :last_name => "Higaki" }
+-# ↓
+-# user = { first_name: "Yusuke", last_name: "Higaki" }
