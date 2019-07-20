@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<title>ChatSpaceSample</title>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="XO3SSZHkv/DFcAvzVmsrn5g/PDmaMfPOJe5IZlByP3UdlaGCpfli4LUdmj92G2sBgT723U0VyQ9up+GQqaS7hw==" />
+<link rel="stylesheet" media="all" href="/assets/application-20597f7122b97f433c4487edf7d6a0cfc9e951e2a661b8b0c7320b95bbd38ccd.css" data-turbolinks-track="reload" />
+<script src="/assets/application-92a91cf5753a538c5407a46c726acab43576fb46358ffa8a7ee0ee0719aa2f51.js" data-turbolinks-track="reload"></script>
+</head>
+<body>
+<div class='flash-box'>
+</div>
+
+<div class='chat-group-form'>
+<h1>新規チャットグループ</h1>
+<form class="new_group" id="new_group" action="/groups" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="fHsDG7N3JKNZN/6Jb1njneImWemTcxiZZGJRTAki3UC2e9Ji45ro+JoBZLD9gTuQR7TGSjpMtFvjcNA4PBrg+A==" /><div class='chat-group-form__field clearfix'>
+<div class='chat-group-form__field--left'>
+<label class="chat-group-form__label" for="group_name">グループ名
+</label></div>
+<div class='chat-group-form__field--right'>
+<input class="chat__group_name chat-group-form__input" placeholder="グループ名を入力してください" type="text" name="group[name]" id="group_name" />
+</div>
+</div>
+<div class='chat-group-form__field clearfix'>
+<div class='chat-group-form__field--left'>
+<label class="chat-group-form__label" for="user-search-field">チャットメンバーを追加
+</label></div>
+<div class='chat-group-form__field--right'>
+<div class='chat-group-form__search clearfix'>
+<input type="text" name="search" id="user-search-field" value="" placeholder="追加したいユーザー名を入力してください" class="chat-group-form__input" />
+</div>
+<div id='user-search-result'></div>
+</div>
+</div>
+<div class='chat-group-form__field clearfix'>
+<div class='chat-group-form__field--left'>
+<label class="chat-group-form__label" for="members">チャットメンバー</label>
+</div>
+<div class='chat-group-form__field--right'>
+<div class='chat-group-users js-add-user'>
+<div class='chat-group-user clearfix js-chat-member' id='1147'>
+<input value="1147" name="group[user_ids][]" type="hidden" id="group_user_ids" />
+<p class='chat-group-user__name'>daisuke</p>
+</div>
+</div>
+</div>
+</div>
+<div class='chat-group-form__field clearfix'>
+<div class='chat-group-form__field--left'></div>
+<div class='chat-group-form__field--right'>
+<input type="submit" name="commit" value="登録する" class="chat-group-form__action-btn" data-disable-with="登録する" />
+</div>
+</div>
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<title>ChatSpaceSample</title>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="w+zPfgoFy5XQ25+29icfGiDpn7KVAGU7N5XIoyuyQ4QJpWllt1fBbJj0vxqoThhLPHikX9kkPe+1oMqHsYhODg==" />
+<link rel="stylesheet" media="all" href="/assets/application-20597f7122b97f433c4487edf7d6a0cfc9e951e2a661b8b0c7320b95bbd38ccd.css" data-turbolinks-track="reload" />
+<script src="/assets/application-92a91cf5753a538c5407a46c726acab43576fb46358ffa8a7ee0ee0719aa2f51.js" data-turbolinks-track="reload"></script>
+</head>
+<body>
+<div class='flash-box'>
+<div class="alert">アカウント登録もしくはログインしてください。</div>
+</div>
+
+<div class='account-page' id='account-page'>
+<div class='account-page__inner clearfix'>
+<div class='account-page__inner--left account-page__header'>
+<h2>Log in</h2>
+<h5>登録しているユーザーでログイン</h5>
+<a class="btn" href="/users/sign_up">Sign up</a>
+<br>
+
+</div>
+<div class='account-page__inner--right user-form'>
+<form class="new_user" id="new_user" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="FF7ylysEZpDZeEaQTzUqQH8A7nXWRGAEJcODtQrRJKbDc6Yq26TVe5BBXqIxpWMuwJCK+loD4/JpdIHcin2x+A==" /><div class='field'>
+<div class='field-label'>
+<label for="user_email">Email</label>
+</div>
+<div class='field-input'>
+<input autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" />
+</div>
+<div class='field'>
+<div class='field-label'>
+<label for="user_password">Password</label>
+<i>(英数字8文字以上)</i>
+</div>
+<div class='field-input'>
+<input autocomplete="off" type="password" name="user[password]" id="user_password" />
+</div>
+</div>
+<div class='actions'>
+<input type="submit" name="commit" value="Log in" class="btn" data-disable-with="Log in" />
+</div>
+</div>
+</form></div>
+</div>
+</div>
+
+</body>
+</html>

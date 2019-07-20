@@ -1,0 +1,35 @@
+/*ブロックの大きさ*/
+.flash-box {
+  color: white;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-align: center;
+  width: 100vw;
+}
+
+/*余白*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+/*widthとheightの値を[余白とborderを含んだ大きさ]にする*/
+* {
+  box-sizing: border-box;
+}
+
+/*block=要素が横までいっぱいに広がり、縦に並んでいく状態*/
+div {
+  display: block;
+}
+
+/*文字を黒、背景を白*/
+html {
+  color: #000;
+  background: #FFF;
+}
+
+/*スクロールできる範囲を決める設定*/
+*::-webkit-scrollbar {
+  display: none;
+}
