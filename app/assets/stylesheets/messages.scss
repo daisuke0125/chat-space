@@ -3,13 +3,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-
-.chat-main .main-header a:visited, .chat-main .main-header a:hover, .chat-main .main-header a:active {
-  color: $blue;
-}
-
-
-
 .chat-main {
   width: calc(100vw - 300px);
   float: left;
