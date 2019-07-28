@@ -4,10 +4,12 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.new.where('name LIKE(?)', "%#{params[:keyword]}%")
+    @users = User.where('name LIKE(?)', "%#{params[:keyword]}%")
     respond_to do |format|
       format.html 
       format.json
+    end
+  end
 
   def update
     if current_user.update(user_params)
