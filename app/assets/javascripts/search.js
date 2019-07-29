@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function(){
 $(function() {
   var user_list = $("#user-search-result");
   var member_list = $("#member-search-result");
@@ -21,6 +22,11 @@ $(function() {
     member_list.append(html);
   }
 
+  function appendNoUser(user){
+    var html = `<div class='chat-group-user clearfix'>${ user }</div>`
+    user_list.append(html);
+  }
+
   $(".chat-group-form__field.clearfix").on("keyup", function() {
     var input = $("#user-search-field").val();
     if (input == 0) {
@@ -37,6 +43,9 @@ $(function() {
           members.forEach(function(user){
             appendUsers(user); 
           })
+        }
+        else {
+          appendNoUser("一致するユーザはいません");
         }
       })
     .fail(function() {
@@ -56,4 +65,5 @@ $(function() {
       $(this).parent().remove();
     });
   });
+});
 });
