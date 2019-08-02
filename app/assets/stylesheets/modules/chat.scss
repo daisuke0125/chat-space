@@ -79,7 +79,7 @@
       border: none;
       float: left;
       height: 50px;
-      width: calc(100% - 150px);
+      width: calc(100wh - 150px);
     }
     &__mask {
       background-color: $white;
@@ -89,6 +89,7 @@
       &__image {
         font-size: 20px;
         line-height: 50px;
+        float:right;
       }
       .hidden {
         display: none;
